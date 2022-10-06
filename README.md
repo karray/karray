@@ -1,4 +1,4 @@
-- 🔭 I’m currently working on XIA tools for [EMPAIA](https://en.empaia.org/) project
+- 🔭 I’m currently working on XAI tools for [EMPAIA](https://en.empaia.org/) project
 
 ---
 
