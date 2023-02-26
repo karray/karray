@@ -5,16 +5,16 @@
 <!--START_SECTION:waka-->
 
 ```text
-From: 04 July 2022 - To: 15 February 2023
+From: 04 July 2022 - To: 25 February 2023
 
-Total Time: 167 hrs 32 mins
+Total Time: 172 hrs 55 mins
 
-Python                     74 hrs 9 mins   ███████████░░░░░░░░░░░░░░   44.27 %
-YAML                       15 hrs 54 mins  ██▒░░░░░░░░░░░░░░░░░░░░░░   09.50 %
-Markdown                   15 hrs 12 mins  ██▒░░░░░░░░░░░░░░░░░░░░░░   09.08 %
-HTML                       15 hrs 8 mins   ██▒░░░░░░░░░░░░░░░░░░░░░░   09.03 %
-TeX                        15 hrs 2 mins   ██▒░░░░░░░░░░░░░░░░░░░░░░   08.98 %
-JSON                       12 hrs 49 mins  ██░░░░░░░░░░░░░░░░░░░░░░░   07.66 %
+Python                     74 hrs 9 mins   ██████████▓░░░░░░░░░░░░░░   42.89 %
+TeX                        20 hrs 16 mins  ███░░░░░░░░░░░░░░░░░░░░░░   11.73 %
+YAML                       15 hrs 54 mins  ██▒░░░░░░░░░░░░░░░░░░░░░░   09.20 %
+HTML                       15 hrs 13 mins  ██▒░░░░░░░░░░░░░░░░░░░░░░   08.81 %
+Markdown                   15 hrs 12 mins  ██▒░░░░░░░░░░░░░░░░░░░░░░   08.80 %
+JSON                       12 hrs 49 mins  ██░░░░░░░░░░░░░░░░░░░░░░░   07.42 %
 ```
 
 <!--END_SECTION:waka-->
