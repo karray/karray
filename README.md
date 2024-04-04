@@ -1,4 +1,4 @@
-- 🧅🔍 Peeling back the mystery layers of AI - one transparent slice at a Time #XAI
+- 🧅🔍 Peeling back the mystery layers of AI - one transparent slice at a time #XAI
 
 ---
 
