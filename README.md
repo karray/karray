@@ -1,4 +1,4 @@
-- 🔭 I’m currently working on XAI tools for [EMPAIA](https://en.empaia.org/) project
+- 🧅🔍 Peeling back the mystery layers of AI - one transparent slice at a Time #XAI
 
 ---
 
