@@ -5,15 +5,15 @@
 <!--START_SECTION:waka-->
 
 ```txt
-From: 04 July 2022 - To: 08 August 2026
+From: 04 July 2022 - To: 15 August 2026
 
-Total Time: 1,782 hrs 5 mins
+Total Time: 1,801 hrs 21 mins
 
-Python                     1,064 hrs 39 mins     ███████████████░░░░░░░░░░   59.74 %
-TeX                        273 hrs 29 mins       ████░░░░░░░░░░░░░░░░░░░░░   15.35 %
-Markdown                   103 hrs 57 mins       █▒░░░░░░░░░░░░░░░░░░░░░░░   05.83 %
-HTML                       62 hrs 8 mins         █░░░░░░░░░░░░░░░░░░░░░░░░   03.49 %
-TypeScript                 48 hrs 4 mins         ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.70 %
+Python                     1,065 hrs 54 mins     ██████████████▓░░░░░░░░░░   59.17 %
+TeX                        273 hrs 29 mins       ███▓░░░░░░░░░░░░░░░░░░░░░   15.18 %
+Markdown                   105 hrs 42 mins       █▒░░░░░░░░░░░░░░░░░░░░░░░   05.87 %
+HTML                       62 hrs 8 mins         █░░░░░░░░░░░░░░░░░░░░░░░░   03.45 %
+TypeScript                 48 hrs 4 mins         ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.67 %
 ```
 
 <!--END_SECTION:waka-->
