@@ -5,15 +5,38 @@ on:
   schedule:
     - cron: '0 0 * * 0'
 
+permissions:
+  contents: write
+
 jobs:
   update-readme:
-    name: WakaReadme DevMetrics
     runs-on: ubuntu-latest
     steps:
-      - uses: athul/waka-readme@master
-        with:
+      - uses: actions/checkout@v4
+
+      - name: Update the waka section
+        env:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
-          SHOW_TITLE: true
-          TIME_RANGE: all_time
-          SHOW_TIME: true
-          SHOW_MASKED_TIME: true
+        run: |
+          # all-time stats, laid out as athul/waka-readme did; the secret is a WakaTime OAuth token
+          curl -sf "https://wakatime.com/api/v1/users/current/stats/all_time?api_key=$WAKATIME_API_KEY" > /tmp/waka.json
+          WAKA=$(jq -r '
+            def day: sub("T.*"; "") | strptime("%Y-%m-%d") | strftime("%d %B %Y");
+            def pad($n): . + " " * ($n - length);
+            def bar: (. / 100 * 25) as $p | ($p + 0.5 / 3 | floor) as $n | (($p - $n) * 3 + 0.5 | floor) as $r
+              | ("█" * $n + (if $r > 0 then "░▒▓█"[$r:$r + 1] else "" end)) as $b | $b + "░" * (25 - ($b | length));
+            def pct: (. * 100 | round + 10000 | tostring) as $s | $s[1:3] + "." + $s[3:] + " %";
+            .data
+            | if (.languages | length) == 0 then error("no languages from WakaTime") end
+            | (.languages | map(.name | length) | max) as $w
+            | "From: \(.start | day) - To: \(.end | day)\n\nTotal Time: \(.human_readable_total_including_other_language)\n\n"
+              + (.languages[:5] | map((.name | pad($w)) + "   " + (.text | pad(22)) + (.percent | bar) + "   " + (.percent | pct)) | join("\n"))
+          ' /tmp/waka.json)
+          export WAKA
+          perl -0pi -e 's/(<!--START_SECTION:waka-->\n).*?(\n<!--END_SECTION:waka-->)/$1\n```txt\n$ENV{WAKA}\n```\n$2/s' README.md
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -am "Updated waka-readme graph with new metrics" && git push || echo "no changes"
